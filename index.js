@@ -108,12 +108,27 @@ const newObj = {...obj}
 
 /*Changing student1 to Brookes does not change the initial value on student2. This proves that in primitive data types, actual values are copied, so both have their own. On the stack memory, student1 and student2 are distinct. */ 
 
-  let student1 = "Halina";
+  // let student1 = "Halina";
 
-  let student2 = student1;
+  // let student2 = student1;
  
-  student1 = "Brookes"
+  // student1 = "Brookes"
 
-  console.log(student1);
+  // console.log(student1);
 
-      console.log(student2)
+  //     console.log(student2)
+
+/* */
+
+const studentNames = {
+           student1: 'Halina',
+           student2: "Brookes",
+           student3:"Anthony"
+   }
+
+
+   Object.defineProperty(studentNames, "student4", {
+      value: "Mirabel",
+   })
+
+   console.log(studentNames.student4);

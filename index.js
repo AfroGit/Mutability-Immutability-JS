@@ -64,12 +64,44 @@ Reference data does not copy values, but rather pointers.
 
  //   console.log(staff2)
 
-/* */ 
+/*
+Syntax: Object.assign(target, source)
+The method has two arguments, target and source. The target is the object that receives new properties, while the source is where the properties come from.
+
+*/ 
+
+// const staff = {
+//       name: "Strengthened",
+//       age: 43,
+//       Hobbies: ["reading", "Swimming"]
+//    }
+// The properties on the staff object were cloned into an empty target object below.
+ //   const staff2 = Object.assign({}, staff);
+
+ // staff2.age = 53;
+/*staff2 now has its own properties. 
+changing the value of any of its properties, will not affect the values of the properties on the staff object.*/ 
+   // console.log(staff)
+
+   // console.log(staff2)
+
+
+/*syntax of the spread operator:
+const newObj = {...obj}
+*/ 
 
 const staff = {
-      name: "Strengthened",
-      age: 43,
-      Hobbies: ["reading", "Swimming"]
+    name: "Strengthened",
+    age: 43,
+    Hobbies: ["reading", "Swimming"]
    }
 
-   const staff2 = Object.assign({}, staff);
+   /*place three dots ... before the name of the object whose properties you intend to clone */ 
+  const staff2 = {...staff};
+
+
+   staff2.age = 53;
+
+   console.log(staff)
+
+   console.log(staff2)

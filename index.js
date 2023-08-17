@@ -118,17 +118,92 @@ const newObj = {...obj}
 
   //     console.log(student2)
 
-/* */
+/*To prevent object mutability, you can use the Object.preventExtensions(), Object.seal(), and Object.freeze() methods. */
 
-const studentNames = {
-           student1: 'Halina',
-           student2: "Brookes",
-           student3:"Anthony"
-   }
+// const studentNames = {
+//            student1: 'Halina',
+//            student2: "Brookes",
+//            student3:"Anthony"
+//    }
 
 
-   Object.defineProperty(studentNames, "student4", {
-      value: "Mirabel",
-   })
+//    Object.defineProperty(studentNames, "student4", {
+//       value: "Mirabel",
+//    })
 
-   console.log(studentNames.student4);
+//    console.log(studentNames.student4);
+
+
+/*Object.preventExtensions(obj)
+
+Using Object.preventExtensions stops new properties from entering the object. The object does not increase in size and maintains its properties. By default, all objects in JavaScript are extensible. With this method, you can delete properties from your object. */
+
+ // const makeNonExtensive = {
+ //           firstname: "Charles",
+ //           lastname: "Chandlier"
+ //   }
+
+ //   Object.preventExtensions(makeNonExtensive)
+
+ //   makeNonExtensive.designation = "Software Engineer";
+   
+ //   console.log(makeNonExtensive)
+/*Above the designation property was not added and there's no error message. */ 
+
+
+
+/* Object.defineProperty(obj, prop, descriptor)
+
+  obj: The object you want to add properties to.
+  
+  prop: You define the name of the property you want to add or change.         It should be either a string or symbol
+  
+  Descriptor: You include the value of the property.
+*/ 
+
+
+ // const makeNonExtensive = {
+ //           firstname: "Charles",
+ //           lastname: "Chandlier"
+ //   }
+
+ //   Object.preventExtensions(makeNonExtensive)
+
+ //   Object.defineProperty(makeNonExtensive, "age", {
+ //      value: "twenty",
+ //   })
+/*Adding new properties using the define property throws error message */ 
+   // console.log(makeNonExtensive)
+
+/*The value of the property of a non-extensible object can be changed as demonstrated with the below line of code. */ 
+
+
+ // const makeNonExtensive = {
+ //            firstname: "Charles",
+ //            lastname: "Chandlier"
+ //    }
+
+ //   Object.preventExtensions(makeNonExtensive)
+
+ //   Object.defineProperty(makeNonExtensive, 'firstname', {
+ //    value: 'Jason',
+ //    })
+ //    console.log(makeNonExtensive)
+
+/*In spite of the object being non-extensible, the lastname property was deleted below. */
+
+//  delete object.propertyname
+
+ // const makeNonExtensive = {
+ //           firstname: "Charles",
+ //           lastname: "Chandlier"
+ //   }
+
+ //   Object.preventExtensions(makeNonExtensive)
+
+ //   delete makeNonExtensive.lastname
+
+ //   console.log(makeNonExtensive)
+
+
+/* */ 

@@ -34,8 +34,32 @@ As a primitive data type, symbols are unique. The values that are returned are a
  //   console.log(typeof check)
 
 
-function favorite(question) {
-      console.log(`Hi dear, do you like ${question} programming language?`)
-   }
+// function favorite(question) {
+//       console.log(`Hi dear, do you like ${question} programming language?`)
+//    }
 
-   favorite('JavaScript')
+//    favorite('Jing Jong')
+
+/*
+Another pointer is placed on the stack when staff was assigned to staff2. Now, these pointers point to a single object on the heap.
+
+Reference data does not copy values, but rather pointers.
+*/ 
+// const staff = {
+//          name: "Strengthened",
+//          age: 43,
+//          Hobbies: ["reading", "Swimming"]
+//    }
+/*Changing the age of staff2 updates the age of the staff object. Now you know it is because both point to the same object. */ 
+  
+// const staff2 = staff;
+
+   // console.log(staff);
+   
+   // console.log(staff2);
+
+ // staff2.age = 53;
+
+ //   console.log(staff)
+
+ //   console.log(staff2)

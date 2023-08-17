@@ -25,10 +25,17 @@ As a primitive data type, symbols are unique. The values that are returned are a
    
  // console.log(typeof mySymbol)
 
- const myBigInt = 12n;
+ // const myBigInt = 12n;
 
- console.log(typeof myBigInt)
+ // console.log(typeof myBigInt)
 
- const check = BigInt(414242532)
+ // const check = BigInt(414242532)
 
-   console.log(typeof check)
+ //   console.log(typeof check)
+
+
+function favorite(question) {
+      console.log(`Hi dear, do you like ${question} programming language?`)
+   }
+
+   favorite('JavaScript')

@@ -206,4 +206,35 @@ Using Object.preventExtensions stops new properties from entering the object. Th
  //   console.log(makeNonExtensive)
 
 
-/* */ 
+/*
+Object.seal()
+
+*/ 
+// const studentNames = {
+//            student1: 'Halina',
+//            student2: "Brookes", 
+//            student3:"Alina"
+//    }
+
+//    Object.seal(studentNames)
+// Object.isSealed(studentNames) is used to check if an object is sealed.
+   // console.log(Object.isSealed(studentNames))
+
+   
+      // const studentNames = {
+      //         student1: 'Halina',
+      //         student2: "Brookes",
+      //         student3:"Alina"
+      // }
+
+      //    Object.seal(studentNames)
+
+      // Object.defineProperty(studentNames, 'student2', {
+      //    value: "Water-Brookes",
+      // })
+// student2 has been changed
+      // console.log(studentNames)
+
+
+/* Object.freeze() */ 
+

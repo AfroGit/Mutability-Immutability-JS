@@ -238,3 +238,68 @@ Object.seal()
 
 /* Object.freeze() */ 
 
+ // const teamplayers = {
+ //           player1: "Andrey",
+ //           player2: "Abundance"
+ //   }
+
+
+   // Object.freeze(teamplayers)
+
+   // Object.defineProperty(teamplayers, 'player3', {
+   //    value: 'Charis'
+   //    })
+   //    console.log(teamplayers)
+
+   // console.log(teamplayers)
+// Dot notation fails silently when trying to add a property, but defineproperty throws a TypeError instead.
+
+ // const teamplayers = {
+ //           player1: "Andrey",
+ //           player2: "Abundance",
+ //                   substitutes: {
+ //                   player3: "Jeremiah",
+ //                   player4: "Jayden"
+ //            }
+ //   }
+
+ //   const squad = teamplayers;
+
+ //   Object.freeze(teamplayers)
+
+
+ //   Object.defineProperty(teamplayers.substitutes, 'player5', {
+ //      value: "Woodland"
+ //   })
+
+ //   console.log(teamplayers)
+/*Player5 has been added to the nested substitutes even though the object.freeze method was applied to the parent teamplayers.
+You can also modify the value of the properties in the nested object.
+Everything that the object.freeze prevents on the parent object is obtainable on the child object that is nested.*/ 
+
+/*Below is an example of a deep freeze which prevents any kind of changes or deletions on the object,applying to both the external obj and its its nested objects. */ 
+ 
+// const deepVal = obj => {
+//         Object.keys(obj).forEach(prop => {
+//         if (typeof obj[prop] === 'object') deepVal(obj[prop]);
+//         });
+//         return Object.freeze(obj);
+//     };
+
+//     const teamplayers = deepVal( {
+//             player1: "Andrey",
+//             player2: "Abundance",
+//                     substitutes: {
+//                         player3: "Jeremiah",
+//                         player4: "Jayden"
+//                     }
+//             }
+//     )
+//    const squad = teamplayers;
+
+//    Object.freeze(teamplayers)
+   
+//    console.log(Object.isFrozen(teamplayers));
+   
+//    console.log(Object.isFrozen(squad));
+

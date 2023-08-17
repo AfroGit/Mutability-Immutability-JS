@@ -63,3 +63,13 @@ Reference data does not copy values, but rather pointers.
  //   console.log(staff)
 
  //   console.log(staff2)
+
+/* */ 
+
+const staff = {
+      name: "Strengthened",
+      age: 43,
+      Hobbies: ["reading", "Swimming"]
+   }
+
+   const staff2 = Object.assign({}, staff);

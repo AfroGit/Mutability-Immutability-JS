@@ -90,18 +90,30 @@ changing the value of any of its properties, will not affect the values of the p
 const newObj = {...obj}
 */ 
 
-const staff = {
-    name: "Strengthened",
-    age: 43,
-    Hobbies: ["reading", "Swimming"]
-   }
+// const staff = {
+//     name: "Strengthened",
+//     age: 43,
+//     Hobbies: ["reading", "Swimming"]
+//    }
 
    /*place three dots ... before the name of the object whose properties you intend to clone */ 
-  const staff2 = {...staff};
+  // const staff2 = {...staff};
 
 
-   staff2.age = 53;
+  //  staff2.age = 53;
 
-   console.log(staff)
+  //  console.log(staff)
 
-   console.log(staff2)
+  //  console.log(staff2)
+
+/*Changing student1 to Brookes does not change the initial value on student2. This proves that in primitive data types, actual values are copied, so both have their own. On the stack memory, student1 and student2 are distinct. */ 
+
+  let student1 = "Halina";
+
+  let student2 = student1;
+ 
+  student1 = "Brookes"
+
+  console.log(student1);
+
+      console.log(student2)

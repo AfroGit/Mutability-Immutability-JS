@@ -303,3 +303,14 @@ Everything that the object.freeze prevents on the parent object is obtainable on
    
 //    console.log(Object.isFrozen(squad));
 
+/*An object that you declared using const is still mutable, so you can still modify the properties of that particular object as you can see below: */
+
+const getObj = {
+           color1: "Green",
+           color2: "Blue",
+           color3: "Yellow"
+   }
+
+   getObj.color1 = "Brown";
+   
+   console.log(getObj.color1) 
